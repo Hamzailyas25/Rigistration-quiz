@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration and Quiz</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #b0c574, #a2b0bd);
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .registration-form,
+        .quiz {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .registration-form button,
+        .quiz button {
+            background: linear-gradient(to right, #b3c22b, #a0ac4e);
+            color: #fff;
+            padding: 12px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .thanks-message {
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .quiz .question {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .quiz .options {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .quiz .options label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .quiz .options input {
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="registration-form">
+    <div class="thanks-message">Thanks for registering! Test your knowledge with our quiz:</div>
+    <button onclick="startQuiz()">Start Quiz</button>
+</div>
+
+<div class="quiz" style="display: none;">
+    <div class="question">What does HTML stand for?</div>
+    <div class="options">
+        <label><input type="radio" name="answer" value="A"> A) Hyper Text Markup Language</label>
+        <label><input type="radio" name="answer" value="B"> B) High-level Text Management Language</label>
+        <label><input type="radio" name="answer" value="C"> C) Hyperlink and Text Markup Language</label>
+        <label><input type="radio" name="answer" value="D"> D) Home Tool Markup Language</label>
+    </div>
+    <button onclick="checkAnswer()">Submit</button>
+
+<script src="scrip.js"></script>
+
+</body>
+</html>
